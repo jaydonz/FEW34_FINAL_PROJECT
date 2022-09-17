@@ -486,4 +486,8 @@ h5 {
   .vinyl:hover .record {
     margin-left: 55px;
   }
+
+  h3 {
+    padding: 25px 20px 5px;
+  }
 }
