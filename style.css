@@ -1,0 +1,443 @@
+* {
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+.top_row {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  overflow: hidden;
+  padding-top: 25px;
+  padding: 20px;
+}
+.top_logo {
+  display: flex;
+  align-self: center;
+  margin: 0px;
+  width: 260px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.search_container {
+  display: flex;
+  flex: 1 1 100%;
+  max-width: 400px;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search_box {
+  background-color: white;
+  border: 0;
+  border-style: none;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  flex: 1;
+}
+
+.search_button {
+  background: white;
+  border: 0;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  border-radius: 0;
+  flex: 0;
+  transition: 1.5s ease-in;
+  cursor: pointer;
+}
+
+.search_box:focus {
+  box-shadow: inset 0 0 3px #000000;
+  outline: none;
+}
+
+.search_button:hover {
+  background: black;
+  color: white;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+}
+
+.nav_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+header {
+  background-color: #fdfbf2;
+}
+
+/* this to override the user agent style sheet */
+ul {
+  padding: 0;
+}
+
+.desk_top_nav {
+  display: none;
+  list-style: none;
+}
+
+.desk_top_nav li {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.hamburger_lines {
+  width: 30px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+/* Menu coming in from the side */
+
+/* done - this controls side menu - left : if you have to go back to have a change the transition */
+.side_menu_position_design {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(253, 251, 242);
+  transform: translateX(100%);
+  transition: 0.6s ease-in-out;
+  z-index: 50;
+}
+
+/* done - this is cross in corner on side menu - java */
+#cross_trigger {
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  top: 25px;
+  right: 20px;
+}
+
+/* done - side menu logo in the ul */
+#side_menu_logo {
+  display: flex;
+  align-content: flex-start;
+  margin: 25px;
+  width: 200px;
+}
+
+/* done - side menu ul */
+.side_menu_left_content li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+/* remember this below will disable automatic links coloring without selecting a color */
+/* may have to it turn back on for the dropdowns  */
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* translateX() Translates an element horizontally. */
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* hero area */
+
+.showcase {
+  position: relative;
+  right: 0;
+  width: 100%;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #6f0200;
+  mix-blend-mode: overlay;
+  z-index: 3;
+}
+
+.text {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+h1 {
+  padding: 100px 40px 60px;
+  color: #ee5007;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  z-index: 5;
+}
+
+h2 {
+  padding: 0px 40px 60px;
+  color: #ee5007;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  z-index: 5;
+}
+
+.showcase button {
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 45px;
+  max-width: 200px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-width: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1.5s ease-in;
+  z-index: 5;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #6f0200;
+  z-index: 5;
+}
+
+/* feature products */
+
+.featureproducts {
+  background-color: #fdfbf2;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: DodgerBlue;
+}
+
+.record_item {
+  width: 100%;
+  margin: 10px 10px;
+  background-color: rgb(244, 8, 173);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 580px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.record_info {
+  font-size: 14px;
+  list-style-type: none;
+  line-height: normal;
+  color: black;
+  margin: 0;
+  padding: 25px 5px 5px 5px;
+}
+
+.vinyl {
+  height: 320px;
+  width: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 1),
+    rgba(255, 0, 0, 0)
+  );
+}
+
+.sleeve {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+
+.record {
+  background: gold;
+  margin: 10px;
+  height: 285px;
+  width: 285px;
+  border-radius: 50%;
+  transition: 500ms;
+  transition-timing-function: ease-out;
+}
+
+.vinyl:hover .record {
+  margin-left: 80px;
+}
+
+h5 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.price-buy-now-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+.price-buy-now-container h4 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.price-buy-now-container button {
+  align-content: center;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 10px 30px;
+  max-width: 200px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-width: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1.5s ease-in;
+}
+.price-buy-now-container button:hover {
+  background-color: white;
+  color: rgb(255, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .top_row {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px 0px 50px;
+  }
+  .top_logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    padding: 10px;
+  }
+  .search_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    flex: 0 1 350px;
+  }
+  .desk_top_nav {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .showcase {
+    height: 800px;
+  }
+
+  .showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+
+  .text {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+
+  h1 {
+    padding: 150px 60px 60px;
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin: 0;
+    z-index: 5;
+  }
+  h2 {
+    padding: 0px 60px 60px;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    z-index: 5;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .desk_top_nav li {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
