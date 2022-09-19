@@ -13,11 +13,11 @@ function menuLeave() {
 }
 
 // record list section loop
-const backinstock = document.querySelector(".backinstock");
-const fullCat = document.createElement("section");
+const backInStock = document.querySelector(".backinstock");
+const fullCatalogue = document.createElement("section");
 
-fullCat.classList.add("grid-container");
-backinstock.appendChild(fullCat);
+fullCatalogue.classList.add("grid-container");
+backInStock.appendChild(fullCatalogue);
 
 recordList.forEach((album) => {
   const recordItem = document.createElement("div");
@@ -38,7 +38,7 @@ recordList.forEach((album) => {
             <button><a href="#">Buy Now</a></button>
           </div>`;
 
-  fullCat.appendChild(recordItem);
+  fullCatalogue.appendChild(recordItem);
   recordItem.classList.add("record_item");
 });
 
