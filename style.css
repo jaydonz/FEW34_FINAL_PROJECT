@@ -258,7 +258,7 @@ button:hover {
 
 /* feature products */
 
-.featureproducts {
+.feature_products_container {
   background-color: #fdfbf2;
 }
 
@@ -326,7 +326,6 @@ h3 {
 }
 
 h5 {
-  text-transform: capitalize;
   color: black;
   font-size: 20px;
   font-weight: bold;
@@ -353,11 +352,12 @@ h5 {
 
 .price-buy-now-container button {
   align-content: center;
-  background-color: rgb(255, 0, 0);
+  background-color: #6f0200;
   color: white;
   padding: 10px 30px;
   max-width: 200px;
   text-align: center;
+  text-decoration: none;
   display: inline-block;
   font-size: 10px;
   font-weight: bold;
@@ -366,11 +366,13 @@ h5 {
   border-width: 0;
   border-radius: 2px;
   cursor: pointer;
-  transition: 1.5s ease-in;
+  transition: 0.5s ease;
+  box-shadow: 0 3px rgb(211, 211, 211);
 }
-.price-buy-now-container button:hover {
-  background-color: white;
-  color: rgb(255, 0, 0);
+
+.price-buy-now-container button:active {
+  box-shadow: 0 0px rgb(211, 211, 211);
+  transform: translateY(3px);
 }
 
 @media screen and (min-width: 768px) {
@@ -428,6 +430,11 @@ h5 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .record {
+    height: 190px;
+    width: 190px;
+  }
+
   .record_item {
     height: 420px;
   }
@@ -440,17 +447,13 @@ h5 {
     height: 220px;
   }
 
-  .sleeve {
-    height: 200px;
-    width: 200px;
-  }
   .price-buy-now-container h4 {
     font-size: 18px;
   }
 
-  .record {
-    height: 190px;
-    width: 190px;
+  .sleeve {
+    height: 200px;
+    width: 200px;
   }
 
   .vinyl:hover .record {
