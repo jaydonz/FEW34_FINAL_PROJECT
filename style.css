@@ -6,14 +6,12 @@
 .top_row {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-items: center;
   overflow: hidden;
   padding-top: 25px;
   padding: 20px;
 }
 .top_logo {
-  display: flex;
-  align-self: center;
   margin: 0px;
   width: 260px;
   padding: 20px;
