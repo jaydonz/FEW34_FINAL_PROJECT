@@ -16,7 +16,7 @@ function menuLeave() {
 
 // feature product section loop
 const featureproducts = document.querySelector(".featureproducts");
-const featureAlbumsForSale = document.createElement("section");
+const featureAlbumsForSale = document.createElement("div");
 
 featureAlbumsForSale.classList.add("grid-container");
 featureproducts.appendChild(featureAlbumsForSale);
