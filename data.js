@@ -199,7 +199,7 @@ const recordList = [
       "https://coloredvinylrecords.com/pictures/t/the-beatles-sgt-pepper-s-lonely-hearts-club-band-2-01422925147.png",
     urlrecord:
       "https://coloredvinylrecords.com/pictures/t/the-beatles-sgt-pepper-s-lonely-hearts-club-band-2.png",
-    featured: "yes",
+    featured: "no",
   },
   {
     name: "No Doubt Tragic Kingdom",
